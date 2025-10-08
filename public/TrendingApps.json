@@ -1,0 +1,146 @@
+[
+    {
+    "image": "https://img.icons8.com/color/96/chat--v1.png",
+    "title": "Chatly",
+    "companyName": "NovaTech",
+    "id": 1,
+    "description": "A fast, secure messaging app with group chat, voice, and video call support.",
+    "size": 48,
+    "reviews": 12500,
+    "ratingAvg": 4.4,
+    "downloads": 5000000,
+    "ratings": [
+      { "name": "1 star", "count": 600 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 3500 },
+      { "name": "5 star", "count": 7400 }
+    ]
+  },
+  {
+    "image": "/src/assets/demo-app (1).webp",
+    "title": "FitTrack",
+    "companyName": "Healthify Ltd.",
+    "id": 2,
+    "description": "Track your workouts, steps, and calories with personalized fitness goals.",
+    "size": 32,
+    "reviews": 8500,
+    "ratingAvg": 4.6,
+    "downloads": 2000000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 700 },
+      { "name": "4 star", "count": 2600 },
+      { "name": "5 star", "count": 4500 }
+    ]
+  },
+  {
+    "image": "https://img.icons8.com/color/96/note.png",
+    "title": "NoteMaster",
+    "companyName": "Vision Apps",
+    "id": 3,
+    "description": "Take notes, organize tasks, and sync seamlessly across all your devices.",
+    "size": 25,
+    "reviews": 5400,
+    "ratingAvg": 4.3,
+    "downloads": 1500000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 350 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 1600 },
+      { "name": "5 star", "count": 2350 }
+    ]
+  },
+  {
+    "image": "https://img.icons8.com/color/96/restaurant.png",
+    "title": "FoodieHub",
+    "companyName": "Gourmet Inc.",
+    "id": 4,
+    "description": "Discover restaurants, read reviews, and order food online instantly.",
+    "size": 54,
+    "reviews": 9800,
+    "ratingAvg": 4.1,
+    "downloads": 4000000,
+    "ratings": [
+      { "name": "1 star", "count": 700 },
+      { "name": "2 star", "count": 900 },
+      { "name": "3 star", "count": 1600 },
+      { "name": "4 star", "count": 2800 },
+      { "name": "5 star", "count": 3800 }
+    ]
+  },
+  {
+    "image": "/src/assets/demo-app (2).webp",
+    "title": "Travelio",
+    "companyName": "Skyline Solutions",
+    "id": 5,
+    "description": "Plan your trips, book flights and hotels, and explore destinations worldwide.",
+    "size": 61,
+    "reviews": 11300,
+    "ratingAvg": 4.5,
+    "downloads": 7500000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 1300 },
+      { "name": "4 star", "count": 3100 },
+      { "name": "5 star", "count": 5600 }
+    ]
+  },
+  {
+    "image": "/src/assets/demo-app (3).webp",
+    "title": "Learnly",
+    "companyName": "EduWorld",
+    "id": 6,
+    "description": "Access thousands of courses on coding, design, business, and more.",
+    "size": 45,
+    "reviews": 7600,
+    "ratingAvg": 4.7,
+    "downloads": 1800000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 600 },
+      { "name": "4 star", "count": 2000 },
+      { "name": "5 star", "count": 4500 }
+    ]
+  },
+  {
+    "image": "https://img.icons8.com/color/96/musical-notes.png",
+    "title": "MusicFlow",
+    "companyName": "Harmony Labs",
+    "id": 7,
+    "description": "Stream unlimited music, create playlists, and listen offline.",
+    "size": 39,
+    "reviews": 15400,
+    "ratingAvg": 4.2,
+    "downloads": 12000000,
+    "ratings": [
+      { "name": "1 star", "count": 1200 },
+      { "name": "2 star", "count": 1400 },
+      { "name": "3 star", "count": 2800 },
+      { "name": "4 star", "count": 4200 },
+      { "name": "5 star", "count": 5800 }
+    ]
+  },
+  {
+    "image": "https://img.icons8.com/color/96/controller.png",
+    "title": "GameSphere",
+    "companyName": "PixelWorks",
+    "id": 8,
+    "description": "Discover trending mobile games, get reviews, and play with friends online.",
+    "size": 72,
+    "reviews": 18700,
+    "ratingAvg": 4.0,
+    "downloads": 9500000,
+    "ratings": [
+      { "name": "1 star", "count": 1500 },
+      { "name": "2 star", "count": 1800 },
+      { "name": "3 star", "count": 3100 },
+      { "name": "4 star", "count": 4200 },
+      { "name": "5 star", "count": 7100 }
+    ]
+  }
+]

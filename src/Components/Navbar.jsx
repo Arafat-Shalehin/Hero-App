@@ -20,7 +20,7 @@ const Navbar = () => {
                         <li><a>Installation</a></li>
                     </ul>
                     </div>
-                    <a className="text-xl flex items-center">
+                    <a href='/' className="text-xl flex items-center">
                         <img
                         className='w-9 mr-1' 
                         src="/src/assets/logo.png" 
@@ -38,7 +38,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn bg-gradient-to-l from-[#9F62F2] to-[#632EE3]
+                    <a href='https://github.com/Arafat-Shalehin' className="btn bg-gradient-to-l from-[#9F62F2] to-[#632EE3]
                     text-white">
                         <FaGithub className='text-xl' />Contribute
                     </a>

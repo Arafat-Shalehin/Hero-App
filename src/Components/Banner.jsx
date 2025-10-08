@@ -1,6 +1,4 @@
 import React from 'react';
-import { FaGooglePlay } from "react-icons/fa";
-import { FaAppStoreIos } from "react-icons/fa";
 
 const Banner = () => {
     return (
@@ -17,12 +15,12 @@ const Banner = () => {
                 </p>
                 <div className='font-semibold space-x-10 text-xl mb-8'>
                     <button className='border-2 border-gray-400 px-3 md:px-6 
-                    py-1 rounded-lg'>
-                        <FaGooglePlay className='inline-block items-center
+                    py-2 rounded-lg'>
+                        <img src='/src/assets/fi_16076057.png' className='inline-block items-center
                         h-10 md:text-3xl'/> Google Play</button>
                     <button className='border-2 border-gray-400 px-3 md:px-6 
-                    py-1 rounded-lg'>
-                        <FaAppStoreIos className='inline-block items-center
+                    py-2 rounded-lg'>
+                        <img src='/src/assets/fi_5977575.png' className='inline-block items-center
                         h-10 md:text-3xl'/> App Store</button>
                 </div>
                 <img
