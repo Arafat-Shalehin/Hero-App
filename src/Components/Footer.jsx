@@ -6,8 +6,8 @@ import { IoLogoLinkedin } from "react-icons/io";
 const Footer = () => {
     return (
         <div>
-            <footer className="footer sm:footer-horizontal bg-[#001931] 
-            text-white p-10">
+            <footer className="flex flex-col md:flex-row justify-around sm:footer-horizontal bg-[#001931] 
+            text-white p-10 space-y-5 md:space-y-0">
             <aside>
                 
                 <div className='flex items-center gap-2'>
@@ -21,14 +21,13 @@ const Footer = () => {
                 </div>
 
             </aside>
-            <nav>
+            <nav className='flex flex-col space-y-2'>
                 <h6 className="footer-title">Company</h6>
                 <a className="link link-hover">About us</a>
                 <a className="link link-hover">Contact</a>
                 <a className="link link-hover">Jobs</a>
-                <a className="link link-hover">Press kit</a>
             </nav>
-            <nav>
+            <nav className='flex flex-col space-y-2'>
                 <h6 className="footer-title">Legal</h6>
                 <a className="link link-hover">Terms of use</a>
                 <a className="link link-hover">Privacy policy</a>
