@@ -36,6 +36,10 @@ const TrendingApps = () => {
                 }
             </div>
            }
+           <button className='bg-gradient-to-l from-[#9F62F2] 
+           to-[#632EE3] text-white font-bold px-10 py-3 rounded-lg'>
+                Show All
+            </button>
         </div>
     );
 };

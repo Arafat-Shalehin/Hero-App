@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaGithub } from "react-icons/fa";
+import { Link, NavLink } from 'react-router';
 
 const Navbar = () => {
     
@@ -15,9 +16,42 @@ const Navbar = () => {
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 
                         rounded-box z-1 mt-3 w-52 p-2 shadow font-semibold">
-                        <li><a>Home</a></li>
-                        <li><a>Apps</a></li>
-                        <li><a>Installation</a></li>
+                        <li>
+                            <NavLink
+                                to="/"
+                                className={({ isActive }) =>
+                                isActive
+                                    ? "text-purple-800 border-b-2 border-purple-800"
+                                    : "hover:text-purple-800 hover:border-b-2 hover:border-purple-800"
+                                }
+                            >
+                                Home
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/bgsf"
+                                className={({ isActive }) =>
+                                isActive
+                                    ? "text-purple-800 border-b-2 border-purple-800"
+                                    : "hover:text-purple-800 hover:border-b-2 hover:border-purple-800"
+                                }
+                            >
+                                Apps
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/sdgfsdf"
+                                className={({ isActive }) =>
+                                isActive
+                                    ? "text-purple-800 border-b-2 border-purple-800"
+                                    : "hover:text-purple-800 hover:border-b-2 hover:border-purple-800"
+                                }
+                            >
+                                Installation
+                            </NavLink>
+                        </li>
                     </ul>
                     </div>
                     <a href='/' className="text-xl flex items-center">
@@ -31,10 +65,44 @@ const Navbar = () => {
                     </a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 font-semibold">
-                        <li><a>Home</a></li>
-                        <li><a>Apps</a></li>
-                        <li><a>Installation</a></li>
+                    <ul className='font-semibold flex items-center gap-5'>
+                        <li>
+                            <NavLink
+                                to="/"
+                                className={({ isActive }) =>
+                                isActive
+                                    ? "text-purple-800 border-b-2 border-purple-800"
+                                    : "hover:text-purple-800 hover:border-b-2 hover:border-purple-800"
+                                }
+                            >
+                                Home
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/bgsf"
+                                className={({ isActive }) =>
+                                isActive
+                                    ? "text-purple-800 border-b-2 border-purple-800"
+                                    : "hover:text-purple-800 hover:border-b-2 hover:border-purple-800"
+                                }
+                            >
+                                Apps
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/sdgfsdf"
+                                className={({ isActive }) =>
+                                isActive
+                                    ? "text-purple-800 border-b-2 border-purple-800"
+                                    : "hover:text-purple-800 hover:border-b-2 hover:border-purple-800"
+                                }
+                            >
+                                Installation
+                            </NavLink>
+                        </li>
+                        
                     </ul>
                 </div>
                 <div className="navbar-end">

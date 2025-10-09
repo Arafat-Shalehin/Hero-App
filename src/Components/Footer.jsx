@@ -19,13 +19,16 @@ const Footer = () => {
                     HERO.IO
                     </p>
                 </div>
+                <p className="text-sm mt-2 font-semibold text-[#627382]">
+                    Your trusted marketplace for discovering <br /> and downloading the best mobile applications.
+                </p>
 
             </aside>
             <nav className='flex flex-col space-y-2'>
                 <h6 className="footer-title">Company</h6>
-                <a className="link link-hover">About us</a>
-                <a className="link link-hover">Contact</a>
                 <a className="link link-hover">Jobs</a>
+                <a className="link link-hover">Contact</a>
+                <a className="link link-hover">About us</a>
             </nav>
             <nav className='flex flex-col space-y-2'>
                 <h6 className="footer-title">Legal</h6>

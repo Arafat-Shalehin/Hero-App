@@ -4,7 +4,7 @@ const EachTrenApp = ({app}) => {
     console.log(app);
     const {image, title, size, ratingAvg}  = app;
     return (
-        <div className='mx-auto'>
+        <div className='mx-auto hover:scale-110 transition ease-in-out'>
             <div className="card bg-base-100 shadow-sm">
             <figure>
                 <img
