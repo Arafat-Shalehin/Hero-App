@@ -31,10 +31,10 @@ const Apps = () => {
             <div className='flex items-center justify-between p-5'>
                 <p className='font-semibold text-xl'>({allAppData.length})Apps Found</p>
                 <span className='flex items-center border-1 border-gray-400 rounded'>
-                    <CiSearch className='text-xl mr-1' /> <input 
-                    className='font-semibold'
+                    <input 
+                    className='font-semibold px-4'
                     type="search" 
-                    placeholder='Search Apps'/>
+                    placeholder="Search Apps"/>
                 </span>
             </div>
 

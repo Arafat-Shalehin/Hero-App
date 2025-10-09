@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { ToastContainer, toast } from 'react-toastify';
 
 const AppDetails = () => {
 
     const {id} = useParams();
     const [app, setApp] = useState('');
+    const [installed, setInstalled] = useState(false);
 
     useEffect(() => {
         fetch('/AllApp.json')
@@ -15,8 +18,31 @@ const AppDetails = () => {
         });
     }, [id]);
 
-    const {image, title, reviews, ratingAvg, brief, developedBy, 
-        downloads, size, description}  = app;
+    const {image, ratings, reviews, ratingAvg, brief, developedBy, 
+        downloads, description}  = app;
+
+     useEffect(() => {
+    
+        const installedApps = JSON.parse(localStorage.getItem("installedApps") || "[]");
+        if (installedApps.includes(app.id)) {
+            setInstalled(true);
+        }
+    }, [app.id]);
+
+    const handleAppInstall = () => {
+        if (app && !installed) {
+        const installedApps = JSON.parse(localStorage.getItem("installedApps") || '[]');
+
+        if (!installedApps.includes(app.id)) {
+            installedApps.push(app.id);
+            localStorage.setItem("installedApps", JSON.stringify(installedApps));
+        }
+
+        setInstalled(true);
+        toast.success(`${app.title} has been Installed`);
+        }
+
+    }
 
     return (
         <div>
@@ -51,19 +77,46 @@ const AppDetails = () => {
                                 <span className='font-bold text-black text-3xl'>{reviews}</span>
                             </h6>
                         </div>
-                        <button className='text-white font-semibold px-8 py-2 rounded
-                         bg-[#00D390] shadow hover:scale-110 transition ease-in-out mt-3'>
-                            Install Now ({size} MB)
+                        <button
+                        disabled={installed}
+                        onClick={() => handleAppInstall()} 
+                        className={`${
+                            installed ? 
+                            'bg-gray-300 cursor-not-allowed text-white font-semibold px-8 py-2 rounded' 
+                            : 
+                            'text-white font-semibold px-8 py-2 rounded bg-[#00D390] shadow hover:scale-110 transition ease-in-out mt-3'
+                            }`}>
+                            {installed ? "Installed" : `Install Now (${app.size} MB)`}
                         </button>
                         
                     </div>
                 </div>
                 <div className="divider"></div>
-                <h1 className='font-bold text-3xl'>Ratings</h1>
-                {/* Chart */}
+                <div className='w-[100%] h-[450px]'>
+                    <h1 className='font-bold text-3xl mb-5'>Ratings</h1>
+                    <div className='w-[100%] h-[380px]'>
+                        <ResponsiveContainer width="100%" height="100%">
+                            <BarChart
+                            data={ratings}
+                            layout="vertical"
+                            margin={{ top: 5, right: 30, bottom: 5 }}
+                            >
+                            <XAxis type="number" />
+                            <YAxis 
+                            type="category" 
+                            dataKey="name" 
+                            width={90}
+                            reversed />
+                            <Tooltip />
+                            <Bar dataKey="count" fill="#ff9800" />
+                            </BarChart>
+                        </ResponsiveContainer>
+                    </div>
+                </div>
                 <div className="divider"></div>
                 <h1 className='text-2xl font-semibold'>Description</h1>
                 <p className='text-[#627382] mt-2 text-[20px]'>{description}</p>
+                <ToastContainer/>
             </div>
         </div>
     );

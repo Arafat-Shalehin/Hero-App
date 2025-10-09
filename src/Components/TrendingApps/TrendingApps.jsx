@@ -36,10 +36,12 @@ const TrendingApps = () => {
                 }
             </div>
            }
-           <button className='bg-gradient-to-l from-[#9F62F2] hover:scale-120 transition 
-           to-[#632EE3] text-white font-bold px-10 py-3 rounded-lg'>
-                <a href="/apps">Show All</a>
-            </button>
+           <a href="/apps">
+            <button className='bg-gradient-to-l from-[#9F62F2] hover:scale-120 transition 
+            to-[#632EE3] text-white font-bold px-10 py-3 rounded-lg'>
+                    Show All
+                </button>
+            </a>
         </div>
     );
 };

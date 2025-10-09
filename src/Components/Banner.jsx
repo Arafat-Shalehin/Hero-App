@@ -14,14 +14,24 @@ const Banner = () => {
                     experiences that truly make an impact.
                 </p>
                 <div className='font-semibold space-x-10 text-xl mb-8'>
-                    <button className='border-2 border-gray-400 px-3 md:px-6 
-                    py-2 rounded-lg'>
-                        <img src='/src/assets/fi_16076057.png' className='inline-block items-center
-                        h-10 md:text-3xl'/> Google Play</button>
-                    <button className='border-2 border-gray-400 px-3 md:px-6 
-                    py-2 rounded-lg'>
-                        <img src='/src/assets/fi_5977575.png' className='inline-block items-center
-                        h-10 md:text-3xl'/> App Store</button>
+                    <a
+                    target="_blank" 
+                    href="https://play.google.com/store/games?device=windows">
+                        <button className='border-2 border-gray-400 px-3 md:px-6 
+                            py-2 rounded-lg'>
+                            <img src='/src/assets/fi_16076057.png' className='inline-block items-center
+                            h-10 md:text-3xl'/> 
+                            Google Play
+                        </button>
+                    </a>
+                    <a target="_blank" href="https://www.apple.com/app-store/">
+                        <button className='border-2 border-gray-400 px-3 md:px-6 
+                            py-2 rounded-lg'>
+                            <img src='/src/assets/fi_5977575.png' className='inline-block items-center
+                            h-10 md:text-3xl'/> 
+                            App Store
+                        </button>
+                    </a>
                 </div>
                 <img
                 className='md:w-[100vh] w-[50vh] mx-auto' 

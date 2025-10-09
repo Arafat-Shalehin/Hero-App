@@ -42,7 +42,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <NavLink
-                                to="/sdgfsdf"
+                                to='/installedApps'
                                 className={({ isActive }) =>
                                 isActive
                                     ? "text-purple-800 border-b-2 border-purple-800"
@@ -92,7 +92,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <NavLink
-                                to="/sdgfsdf"
+                                to='/installedApps'
                                 className={({ isActive }) =>
                                 isActive
                                     ? "text-purple-800 border-b-2 border-purple-800"
