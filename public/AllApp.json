@@ -144,7 +144,7 @@
     ]
   },
   {
-    "image": "https://img.icons8.com/color/96/podcast.png",
+    "image": "/src/assets/demo-app (5).webp",
     "title": "PodCastly",
     "companyName": "SoundWave",
     "id": 9,
@@ -324,7 +324,7 @@
     ]
   },
   {
-    "image": "https://img.icons8.com/color/96/meditation.png",
+    "image": "/src/assets/demo-app (4).webp",
     "title": "MindSpace",
     "companyName": "CalmTech",
     "id": 19,

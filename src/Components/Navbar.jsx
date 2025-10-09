@@ -30,7 +30,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <NavLink
-                                to="/bgsf"
+                                to='/apps'
                                 className={({ isActive }) =>
                                 isActive
                                     ? "text-purple-800 border-b-2 border-purple-800"
@@ -80,7 +80,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <NavLink
-                                to="/bgsf"
+                                to='/apps'
                                 className={({ isActive }) =>
                                 isActive
                                     ? "text-purple-800 border-b-2 border-purple-800"
