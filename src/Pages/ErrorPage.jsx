@@ -18,7 +18,7 @@ const ErrorPage = () => {
       </p>
 
       <button className="px-6 py-2 bg-gradient-to-l from-purple-400 to-purple-600 text-white rounded-md shadow-md hover:bg-purple-700 transition">
-        Go Back!
+        <a href="/">Go Back!</a>
       </button>
     </div>
   );

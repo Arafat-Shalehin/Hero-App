@@ -30,7 +30,7 @@ const Apps = () => {
 
             <div className='flex items-center justify-between p-5'>
                 <p className='font-semibold text-xl'>({allAppData.length})Apps Found</p>
-                <span className='flex items-center border-1 rounded'>
+                <span className='flex items-center border-1 border-gray-400 rounded'>
                     <CiSearch className='text-xl mr-1' /> <input 
                     className='font-semibold'
                     type="search" 
@@ -43,7 +43,7 @@ const Apps = () => {
                 <AppsLoader/> :
                 
                 <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2
-                sm:gap-8 gap-4 sm:p-15 p-5'>
+                sm:gap-8 gap-6 sm:p-15 p-5'>
                     {
                         allAppData.map(eachapp => 
                         <AllApps key={eachapp.id} eachapp={eachapp}></AllApps>
