@@ -2,7 +2,7 @@ import React from "react";
 
 const AppNotFound = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-50">
+    <div className="flex flex-col items-center justify-center h-screen">
       
       <img
         src="/src/assets/App-Error.png" 
@@ -18,9 +18,11 @@ const AppNotFound = () => {
         Please try another apps
       </p>
 
-      <button className="px-6 py-2 bg-gradient-to-l from-purple-400 to-purple-600  text-white rounded-md shadow-md hover:bg-purple-700 transition">
-        Go Back!
-      </button>
+      <a href="/apps">
+        <button className="px-6 py-2 bg-gradient-to-l from-purple-400 to-purple-600  text-white rounded-md shadow-md hover:bg-purple-700 transition">
+          Go Back!
+        </button>
+      </a>
     </div>
   );
 };

@@ -12,12 +12,14 @@ const TrendingApps = () => {
 
         setIsLoading(true);
 
-        fetch('/TrendingApps.json')
+        fetch('/AllApp.json')
         .then(res => res.json())
         .then(data => setTrendingApps(data));
 
         setIsLoading(false);
     }, [])
+
+    const eightTrendingApps = trendingApps.slice(0, 8)
 
     return (
         <div className='py-10 text-center space-y-5'>
@@ -30,7 +32,7 @@ const TrendingApps = () => {
             <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2
                 sm:gap-8 gap-6 sm:p-15 p-5'>
                 {
-                    trendingApps.map(app => 
+                    eightTrendingApps.map(app => 
                     <EachTrenApp key={app.id} app={app}></EachTrenApp>
                     )
                 }

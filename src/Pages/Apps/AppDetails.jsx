@@ -64,7 +64,7 @@ const AppDetails = () => {
                             <h6>
                                 <img className='w-7 mx-auto sm:mx-0' src="/src/assets/Vector.png" alt="Download Pic" />
                                 <p className='text-sm text-[#627382]'>Downloads</p>
-                                <span className='font-bold text-black text-3xl'>{downloads}</span>
+                                <span className='font-bold text-black text-3xl'>{downloads}M</span>
                             </h6>
                             <h6>
                                 <img className='mx-auto sm:mx-0' src="/src/assets/fi_1828884 (1).png" alt="Star Pic" />
@@ -82,7 +82,7 @@ const AppDetails = () => {
                         onClick={() => handleAppInstall()} 
                         className={`${
                             installed ? 
-                            'bg-gray-300 cursor-not-allowed text-white font-semibold px-8 py-2 rounded' 
+                            'bg-gray-300 cursor-not-allowed text-white font-semibold px-12 py-2 rounded' 
                             : 
                             'text-white font-semibold px-8 py-2 rounded bg-[#00D390] shadow hover:scale-110 transition ease-in-out mt-3'
                             }`}>

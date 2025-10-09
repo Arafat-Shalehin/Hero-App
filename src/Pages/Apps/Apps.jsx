@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { CiSearch } from "react-icons/ci";
 import AppsLoader from './AppsLoader';
 import AllApps from './AllApps';
+import AppErrorPage from './AppErrorPage';
 
 const Apps = () => {
 
     const [allAppData, setAllAppData] = useState([]);
 
     const [isLoading, setIsLoading] = useState(true);
+
+    const [search, setSearch] = useState("");
 
     useEffect(() => {
         setIsLoading(true);
@@ -19,6 +22,10 @@ const Apps = () => {
         setIsLoading(false);
     }, [])
 
+    const finalSearch = search.trim().toLowerCase()
+    const searchApps = finalSearch ? allAppData.filter(app => 
+        app.title.toLowerCase().includes(finalSearch)) : allAppData
+
     return (
         <div>
             <div className='text-center space-y-5 mt-5'>
@@ -29,14 +36,19 @@ const Apps = () => {
             </div>
 
             <div className='flex items-center justify-between p-5'>
-                <p className='font-semibold text-xl'>({allAppData.length})Apps Found</p>
+                <p className='font-semibold text-xl'>({searchApps.length})Apps Found</p>
                 <span className='flex items-center border-1 border-gray-400 rounded'>
                     <input 
-                    className='font-semibold px-4'
+                    className='font-semibold px-4 py-1'
                     type="search" 
-                    placeholder="Search Apps"/>
+                    placeholder="Search Apps"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}/>
                 </span>
             </div>
+            { 
+                searchApps.length == 0 && <AppErrorPage/>
+            }
 
             {
                 isLoading ? 
@@ -45,7 +57,7 @@ const Apps = () => {
                 <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2
                 sm:gap-8 gap-6 sm:p-15 p-5'>
                     {
-                        allAppData.map(eachapp => 
+                        searchApps.map(eachapp => 
                         <AllApps key={eachapp.id} eachapp={eachapp}></AllApps>
                         )
                     }
