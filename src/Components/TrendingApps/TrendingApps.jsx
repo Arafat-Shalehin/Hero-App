@@ -1,25 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Loader from './Loader';
 import EachTrenApp from './EachTrenApp';
+import useApps from '../../Hooks/useApps';
 
 const TrendingApps = () => {
 
-    const [trendingApps, setTrendingApps] = useState([]);
+    const {allApp, loading} = useApps()
 
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-
-        setIsLoading(true);
-
-        fetch('/AllApp.json')
-        .then(res => res.json())
-        .then(data => setTrendingApps(data));
-
-        setIsLoading(false);
-    }, [])
-
-    const eightTrendingApps = trendingApps.slice(0, 8)
+    const eightTrendingApps = allApp.slice(0, 8)
 
     return (
         <div className='py-10 text-center space-y-5'>
@@ -27,7 +15,7 @@ const TrendingApps = () => {
             <p className='text-[#627382] md:text-sm mt-10'>Explore All Trending Apps on the Market developed by us</p>
 
            {
-            isLoading ? 
+            loading ? 
             <Loader/> :
             <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2
                 sm:gap-8 gap-6 sm:p-15 p-5'>

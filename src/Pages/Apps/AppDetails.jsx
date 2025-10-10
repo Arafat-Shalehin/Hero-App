@@ -1,48 +1,51 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { ToastContainer, toast } from 'react-toastify';
+import useApps from '../../Hooks/useApps';
+import AppsLoader from './AppsLoader';
 
 const AppDetails = () => {
 
-    const {id} = useParams();
-    const [app, setApp] = useState('');
+    const { allApp } = useApps();
+    const { id } = useParams();
     const [installed, setInstalled] = useState(false);
+    const [foundApp, setFoundApp] = useState(null);
 
     useEffect(() => {
-        fetch('/AllApp.json')
-        .then(res => res.json())
-        .then(data => {
-            const foundApp = data.find(app => app.id.toString() === id);
-            setApp(foundApp);
-        });
-    }, [id]);
-
-    const {image, ratings, reviews, ratingAvg, brief, developedBy, 
-        downloads, description}  = app;
-
-     useEffect(() => {
-    
-        const installedApps = JSON.parse(localStorage.getItem("installedApps") || "[]");
-        if (installedApps.includes(app.id)) {
-            setInstalled(true);
+        if (allApp && Array.isArray(allApp) && allApp.length > 0) {
+            const app = allApp.find(app => app.id.toString() === id);
+            setFoundApp(app);
         }
-    }, [app.id]);
+    }, [allApp, id]);
+
+    useEffect(() => {
+        if (foundApp?.id) {
+            const installedApps = JSON.parse(localStorage.getItem("installedApps") || "[]");
+            setInstalled(installedApps.includes(foundApp.id));
+        }
+    }, [foundApp?.id]);
 
     const handleAppInstall = () => {
-        if (app && !installed) {
-        const installedApps = JSON.parse(localStorage.getItem("installedApps") || '[]');
+        if (foundApp && !installed) {
+            const installedApps = JSON.parse(localStorage.getItem("installedApps") || '[]');
 
-        if (!installedApps.includes(app.id)) {
-            installedApps.push(app.id);
-            localStorage.setItem("installedApps", JSON.stringify(installedApps));
+            if (!installedApps.includes(foundApp.id)) {
+                installedApps.push(foundApp.id);
+                localStorage.setItem("installedApps", JSON.stringify(installedApps));
+            }
+
+            setInstalled(true);
+            toast.success(`${foundApp.title} has been Installed`);
         }
+    };
 
-        setInstalled(true);
-        toast.success(`${app.title} has been Installed`);
-        }
-
+    if (!foundApp) {
+        return <AppsLoader/>
     }
+
+    const { image, ratings, reviews, ratingAvg, brief, developedBy,
+         downloads, description } = foundApp;
 
     return (
         <div>
@@ -86,7 +89,7 @@ const AppDetails = () => {
                             : 
                             'text-white font-semibold px-8 py-2 rounded bg-[#00D390] shadow hover:scale-110 transition ease-in-out mt-3'
                             }`}>
-                            {installed ? "Installed" : `Install Now (${app.size} MB)`}
+                            {installed ? "Installed" : `Install Now (${foundApp.size} MB)`}
                         </button>
                         
                     </div>

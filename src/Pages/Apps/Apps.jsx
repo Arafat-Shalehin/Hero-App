@@ -1,30 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { CiSearch } from "react-icons/ci";
 import AppsLoader from './AppsLoader';
 import AllApps from './AllApps';
 import AppErrorPage from './AppErrorPage';
+import useApps from '../../Hooks/useApps';
 
 const Apps = () => {
 
-    const [allAppData, setAllAppData] = useState([]);
-
-    const [isLoading, setIsLoading] = useState(true);
+    const {allApp, loading} = useApps()
 
     const [search, setSearch] = useState("");
 
-    useEffect(() => {
-        setIsLoading(true);
-
-        fetch('/AllApp.json')
-        .then(res => res.json())
-        .then(data => setAllAppData(data))
-
-        setIsLoading(false);
-    }, [])
-
     const finalSearch = search.trim().toLowerCase()
-    const searchApps = finalSearch ? allAppData.filter(app => 
-        app.title.toLowerCase().includes(finalSearch)) : allAppData
+    const searchApps = finalSearch ? allApp.filter(app => 
+        app.title.toLowerCase().includes(finalSearch)) : allApp
 
     return (
         <div>
@@ -51,7 +40,7 @@ const Apps = () => {
             }
 
             {
-                isLoading ? 
+                loading ? 
                 <AppsLoader/> :
                 
                 <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2
