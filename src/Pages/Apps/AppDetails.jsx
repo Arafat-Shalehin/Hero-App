@@ -11,6 +11,7 @@ const AppDetails = () => {
     const { id } = useParams();
     const [installed, setInstalled] = useState(false);
     const [foundApp, setFoundApp] = useState(null);
+    
 
     useEffect(() => {
         if (allApp && Array.isArray(allApp) && allApp.length > 0) {

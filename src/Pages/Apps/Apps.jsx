@@ -41,7 +41,7 @@ const Apps = () => {
 
             {
                 loading ? 
-                <AppsLoader/> :
+                <AppsLoader/> : 
                 
                 <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2
                 sm:gap-8 gap-6 sm:p-15 p-5'>

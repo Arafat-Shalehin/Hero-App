@@ -5,21 +5,36 @@ import useApps from '../Hooks/useApps';
 
 const Installation = () => {
 
-    const { allApp, loading, removeInstalledApp } = useApps();
+    const {removeInstalledApp} = useApps();
     const [installedApp, setInstalledApp] = useState([]);
+    const [allApp, setAllApp] = useState([]);
+    const [loading, setLoading] = useState(true);
     const [sortOrder, setSortOrder] = useState("none");
 
     useEffect(() => {
-        const installedIds = JSON.parse(localStorage.getItem("installedApps") || "[]");
-        const installed = allApp.filter(app => installedIds.includes(app.id));
-        setInstalledApp(installed);
-    }, [allApp]);
+        setLoading(true);
+        fetch('/AllApp.json')
+        .then(res => res.json())
+        .then(data => {
+        setAllApp(data);
+        getInstalledApps(data);
+        setLoading(false)
+        });
+    }, []);
+
+    const getInstalledApps = (apps) => {
+        const installed = localStorage.getItem("installedApps");
+        const parsedInstalled = installed ? JSON.parse(installed) : [];
+        
+        const installedApps = apps.filter(app => parsedInstalled.includes(app.id));
+        setInstalledApp(installedApps);
+    };
 
     const handleUninstallApp = (id) => {
-        removeInstalledApp(id);         
-        setInstalledApp(prev => prev.filter(app => app.id !== id)); 
-        toast("App has been removed from your list.");
-    };
+        removeInstalledApp(id);
+        setInstalledApp(prev => prev.filter(app => app.id !== id));
+        toast("App has been removed from your list.")
+    }
 
     const sortedItem = (
         () => {
