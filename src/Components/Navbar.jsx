@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaGithub } from "react-icons/fa";
-import { Link, NavLink } from 'react-router';
+import { NavLink } from 'react-router';
+import logoImage from "../assets/logo.png";
 
 const Navbar = () => {
     
@@ -57,7 +58,7 @@ const Navbar = () => {
                     <a href='/' className="text-xl flex items-center">
                         <img
                         className='w-9 mr-1' 
-                        src="/src/assets/logo.png" 
+                        src={logoImage} 
                         alt="Logo Pic" />
                         <span className='text-[#632EE3] font-bold'>
                             HERO.IO
@@ -106,7 +107,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a href='https://github.com/Arafat-Shalehin' className="btn bg-gradient-to-l from-[#9F62F2] to-[#632EE3]
+                    <a target='_blank' href='https://github.com/Arafat-Shalehin' className="btn bg-gradient-to-l from-[#9F62F2] to-[#632EE3]
                     text-white">
                         <FaGithub className='text-xl' />Contribute
                     </a>

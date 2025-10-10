@@ -4,6 +4,9 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recha
 import { ToastContainer, toast } from 'react-toastify';
 import useApps from '../../Hooks/useApps';
 import AppsLoader from './AppsLoader';
+import vectorPic from "/src/assets/Vector.png";
+import avgRat from "/src/assets/fi_1828884 (1).png";
+import review from "/src/assets/fi_17817684.png";
 
 const AppDetails = () => {
 
@@ -66,17 +69,17 @@ const AppDetails = () => {
                         <div className="divider"></div>
                         <div className='flex items-center gap-8'>
                             <h6>
-                                <img className='w-7 mx-auto sm:mx-0' src="/src/assets/Vector.png" alt="Download Pic" />
+                                <img className='w-7 mx-auto sm:mx-0' src={vectorPic} alt="Download Pic" />
                                 <p className='text-sm text-[#627382]'>Downloads</p>
                                 <span className='font-bold text-black text-3xl'>{downloads}M</span>
                             </h6>
                             <h6>
-                                <img className='mx-auto sm:mx-0' src="/src/assets/fi_1828884 (1).png" alt="Star Pic" />
+                                <img className='mx-auto sm:mx-0' src={avgRat} alt="Star Pic" />
                                 <p className='text-sm text-[#627382]'>Average Ratings</p>
                                 <span className='font-bold text-black text-3xl'>{ratingAvg}</span>
                             </h6>
                             <h6>
-                                <img className='mx-auto sm:mx-0' src="/src/assets/fi_17817684.png" alt="Like Pic" />
+                                <img className='mx-auto sm:mx-0' src={review} alt="Like Pic" />
                                 <p className='text-sm text-[#627382]'>Total Reviews</p>
                                 <span className='font-bold text-black text-3xl'>{reviews}</span>
                             </h6>

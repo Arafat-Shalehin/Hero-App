@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
+import vectorPic from "/src/assets/Vector.png";
+import avgRat from "/src/assets/fi_1828884 (1).png";
 
 const AllApps = ({eachapp}) => {
 
@@ -23,17 +25,18 @@ const AllApps = ({eachapp}) => {
                     </h2>
                     <div className='flex justify-between mt-3'>
                         <span className='bg-[#F1F5E8] font-bold gap-2 
-                        text-[#00D390] sm:px-5 px-2 py-1 rounded-lg flex items-center'>
+                        text-[#00D390] md:px-5 px-2 py-1 rounded-lg flex items-center'>
                             <img 
                             className='w-5'
-                            src="/src/assets/fi_9131795.png" 
+                            src={vectorPic}
                             alt="Download Pic" />
                             {size}M
                         </span>
                         <span className='bg-[#FFF0E1] font-bold gap-2 
-                        text-[#FF8811] px-5 py-1 rounded-lg flex items-center'>
+                        text-[#FF8811] md:px-5 px-2 py-2 rounded-lg flex items-center'>
                             <img 
-                            src="/src/assets/fi_1828884.png" 
+                            className='w-5'
+                            src={avgRat}
                             alt="Star Pic" />
                             {ratingAvg}
                         </span>

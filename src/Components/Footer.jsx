@@ -2,6 +2,7 @@ import React from 'react';
 import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io";
+import logoImage from "../assets/logo.png";
 
 const Footer = () => {
     return (
@@ -14,7 +15,7 @@ const Footer = () => {
                 <div className='flex items-center gap-2'>
                     <img 
                     className='w-19'
-                    src="/src/assets/logo.png" 
+                    src={logoImage} 
                     alt="Logo Pic" />
                     <p className='text-2xl'>
                     HERO.IO

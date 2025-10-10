@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import AppsLoader from './Apps/AppsLoader';
 import { ToastContainer, toast } from 'react-toastify';
 import useApps from '../Hooks/useApps';
+import vectorPic from "/src/assets/Vector.png";
+import avgRat from "/src/assets/fi_1828884 (1).png";
+import review from "/src/assets/fi_17817684.png";
 
 const Installation = () => {
 
@@ -94,13 +97,13 @@ const Installation = () => {
 
                                             <img
                                             className='inline-block w-3 h-4'
-                                            src="/src/assets/Vector.png" 
+                                            src={vectorPic} 
                                             alt="Vector Icon" />
                                             <p className='text-[#00D390] mr-2'>{app.downloads}M</p>  
 
                                             <img
                                             className='w-3 h-4'
-                                            src="/src/assets/fi_1828884.png" 
+                                            src={avgRat} 
                                             alt="Star Icon" />
                                             <p className='text-[#FF8811] mr-2'>{app.ratingAvg}</p>                              
 

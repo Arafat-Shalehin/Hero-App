@@ -1,4 +1,5 @@
 import React from 'react';
+import logoImage from "../../assets/logo.png";
 
 const AppsLoader = () => {
     return (
@@ -6,7 +7,7 @@ const AppsLoader = () => {
             <div className="flex items-center justify-center h-50">
             <p className='flex font-bold text-7xl text-[#627382]'>
                 L<img 
-                src="/src/assets/logo.png" 
+                src={logoImage} 
                 alt="Loading..." 
                 className="w-17 h-17 animate-spin"
                 />ading...

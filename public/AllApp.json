@@ -20,7 +20,7 @@
     ]
   },
   {
-    "image": "/src/assets/demo-app (1).webp",
+    "image": "https://img.icons8.com/color/96/shopping-cart.png",
     "title": "FitTrack",
     "companyName": "Healthify Ltd.",
     "id": 2,
@@ -80,7 +80,7 @@
     ]
   },
   {
-    "image": "/src/assets/demo-app (2).webp",
+    "image": "https://img.icons8.com/color/96/language.png",
     "title": "Travelio",
     "companyName": "Skyline Solutions",
     "id": 5,
@@ -100,7 +100,7 @@
     ]
   },
   {
-    "image": "/src/assets/demo-app (3).webp",
+    "image": "https://img.icons8.com/color/96/language.png",
     "title": "Learnly",
     "companyName": "EduWorld",
     "id": 6,
@@ -160,7 +160,7 @@
     ]
   },
   {
-    "image": "/src/assets/demo-app (5).webp",
+    "image": "https://img.icons8.com/color/96/news.png",
     "title": "PodCastly",
     "companyName": "SoundWave",
     "id": 9,
@@ -360,7 +360,7 @@
     ]
   },
   {
-    "image": "/src/assets/demo-app (4).webp",
+    "image": "https://img.icons8.com/color/96/chat--v1.png",
     "title": "MindSpace",
     "companyName": "CalmTech",
     "id": 19,

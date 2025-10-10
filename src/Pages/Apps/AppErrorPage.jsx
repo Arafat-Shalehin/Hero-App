@@ -1,11 +1,12 @@
 import React from "react";
+import appError from "/src/assets/App-Error.png";
 
 const AppNotFound = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       
       <img
-        src="/src/assets/App-Error.png" 
+        src={appError}
         alt="App Not Found Illustration"
         className="w-80 mb-6"
       />

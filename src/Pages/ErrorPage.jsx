@@ -1,11 +1,12 @@
 import React from "react";
+import errorImg from "/src/assets/error-404.png";
 
 const ErrorPage = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-50">
 
       <img
-        src="/src/assets/error-404.png"
+        src={errorImg}
         alt="404 Illustration"
         className="w-80 mb-6"
       />

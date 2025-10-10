@@ -1,4 +1,7 @@
 import React from 'react';
+import googleplay from '/src/assets/fi_16076057.png';
+import appStore from '/src/assets/fi_5977575.png';
+import heroPic from '/src/assets/hero.png';
 
 const Banner = () => {
     return (
@@ -19,7 +22,7 @@ const Banner = () => {
                     href="https://play.google.com/store/games?device=windows">
                         <button className='border-2 border-gray-400 px-3 md:px-6 
                             py-2 rounded-lg'>
-                            <img src='/src/assets/fi_16076057.png' className='inline-block items-center
+                            <img src={googleplay} className='inline-block items-center
                             h-10 md:text-3xl'/> 
                             Google Play
                         </button>
@@ -27,7 +30,7 @@ const Banner = () => {
                     <a target="_blank" href="https://www.apple.com/app-store/">
                         <button className='border-2 border-gray-400 px-3 md:px-6 
                             py-2 rounded-lg'>
-                            <img src='/src/assets/fi_5977575.png' className='inline-block items-center
+                            <img src={appStore} className='inline-block items-center
                             h-10 md:text-3xl'/> 
                             App Store
                         </button>
@@ -35,7 +38,7 @@ const Banner = () => {
                 </div>
                 <img
                 className='md:w-[100vh] w-[50vh] mx-auto' 
-                src="/src/assets/hero.png" 
+                src={heroPic}
                 alt="Hero pic" />
             </div>
             <div className='w-full h-[200px] bg-gradient-to-t from-[#9F62F2] to-[#632EE3]
